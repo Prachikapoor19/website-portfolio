@@ -820,6 +820,107 @@ body.no-scroll {
     margin-bottom: 0;
 }
 
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.job-current {
+    border-color: rgba(111, 227, 255, 0.35);
+}
+
+.job-meta {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(167, 162, 198, 0.8);
+}
+
+.job-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.job-points {
+    margin: 0 0 22px;
+    padding-left: 20px;
+    color: #d6d2ee;
+    max-width: 50em;
+}
+
+.job-points li {
+    margin-bottom: 8px;
+}
+
+.job-points li::marker {
+    color: var(--violet);
+}
+
+/* ---------- Education ---------- */
+
+.edu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--line);
+}
+
+.edu {
+    position: relative;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 24px;
+    padding: 0 0 34px 34px;
+}
+
+.edu:last-child {
+    padding-bottom: 0;
+}
+
+.edu::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--void);
+    border: 2px solid var(--violet);
+}
+
+.edu:first-child::before {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    box-shadow: 0 0 12px var(--cyan);
+}
+
+.edu-dates {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--dust);
+    padding-top: 2px;
+}
+
+.edu h3 {
+    font-size: clamp(20px, 2vw, 24px);
+    margin-bottom: 6px;
+}
+
+.edu-school {
+    margin: 0 0 6px;
+    font-weight: 600;
+    color: var(--violet);
+}
+
+.edu-note {
+    margin: 0;
+    color: var(--dust);
+    max-width: 40em;
+}
+
 /* ---------- Project previews ---------- */
 
 .project-role {
@@ -1040,6 +1141,72 @@ body.no-scroll {
 
 @keyframes blink {
     50% { opacity: 0.45; }
+}
+
+/* Spam filter */
+.preview-spam {
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 70% 30%, rgba(255, 120, 140, 0.22), transparent 50%),
+        linear-gradient(160deg, #1b0f33, #0e0b2e 70%);
+}
+
+.mail-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mail-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--line);
+}
+
+.mail-list i {
+    font-size: 20px;
+    color: var(--dust);
+}
+
+.mail-list .is-spam {
+    border-color: rgba(255, 120, 140, 0.35);
+    background: rgba(255, 120, 140, 0.06);
+}
+
+.mail-line {
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(243, 240, 255, 0.18);
+}
+
+.pill-spam {
+    color: #ff8fa3;
+    background: rgba(255, 120, 140, 0.14);
+}
+
+.spam-shield {
+    position: absolute;
+    right: 7%;
+    bottom: 9%;
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 28px;
+    color: #fff;
+    background: radial-gradient(circle at 30% 30%, #ffb3c1, #e0456a 70%);
+    box-shadow: 0 0 30px rgba(255, 120, 140, 0.5);
 }
 
 /* ---------- Skills ---------- */
@@ -1394,6 +1561,21 @@ body.no-scroll {
 
     .job {
         padding: 24px;
+    }
+
+    .edu {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding-left: 26px;
+    }
+
+    .mail-list {
+        width: 88%;
+        gap: 7px;
+    }
+
+    .mail-list li {
+        padding: 8px 10px;
     }
 
     .job-head {
