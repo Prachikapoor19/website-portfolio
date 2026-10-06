@@ -1,0 +1,4 @@
+# Tells Netlify which folder holds the website
+[build]
+  publish = "website portfolio"
+  command = ""
