@@ -500,7 +500,7 @@ body.no-scroll {
 .section {
     width: var(--wrap);
     margin: 0 auto;
-    padding: 130px 0;
+    padding: 80px 0;
 }
 
 .section-heading {
@@ -616,7 +616,7 @@ body.no-scroll {
     grid-template-columns: 1.3fr 1fr;
     gap: 70px;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
 }
 
 .project:last-child {
@@ -961,6 +961,11 @@ body.no-scroll {
 
 .dash-stat b {
     display: block;
+    width: 55%;
+    height: 18px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(140, 109, 255, 0.55), rgba(111, 227, 255, 0.4));
     font: 800 clamp(18px, 2.2vw, 26px)/1.1 var(--font-display);
     color: #fff;
 }
@@ -1305,7 +1310,7 @@ body.no-scroll {
     .project-flip {
         grid-template-columns: 1fr;
         gap: 36px;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
 
     .project-flip .project-frame {
@@ -1313,7 +1318,7 @@ body.no-scroll {
     }
 
     .section {
-        padding: 100px 0;
+        padding: 70px 0;
     }
 }
 
@@ -1367,7 +1372,11 @@ body.no-scroll {
     }
 
     .section {
-        padding: 80px 0;
+        padding: 60px 0;
+    }
+
+    .orbit {
+        display: none;
     }
 
     .contact-form {
